@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.5" timestamp="2018-10-03T09:44:00.850">
+<file name="C:\Users\Yinglao Liu\Desktop\CS6650\CS6650\client\src\main\java\client\Main.java">
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="37" rule="UnusedImports" ruleset="Import Statements" package="client" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.concurrent.Executor'
+</violation>
+<violation beginline="19" endline="19" begincolumn="83" endcolumn="90" rule="VariableNamingConventions" ruleset="Naming" package="client" class="Main" method="runPhase" variable="BASE_URI" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'BASE_URI' is not final.
+</violation>
+<violation beginline="19" endline="19" begincolumn="83" endcolumn="90" rule="VariableNamingConventions" ruleset="Naming" package="client" class="Main" method="runPhase" variable="BASE_URI" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Variables should start with a lowercase character, 'BASE_URI' starts with uppercase character.
+</violation>
+<violation beginline="45" endline="45" begincolumn="12" endcolumn="19" rule="VariableNamingConventions" ruleset="Naming" package="client" class="Main" method="main" variable="BASE_URI" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'BASE_URI' is not final.
+</violation>
+<violation beginline="45" endline="45" begincolumn="12" endcolumn="19" rule="VariableNamingConventions" ruleset="Naming" package="client" class="Main" method="main" variable="BASE_URI" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#VariableNamingConventions" priority="1">
+Variables should start with a lowercase character, 'BASE_URI' starts with uppercase character.
+</violation>
+<violation beginline="48" endline="48" begincolumn="21" endcolumn="25" rule="UnusedLocalVariable" ruleset="Unused Code" package="client" class="Main" method="main" variable="phase" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'phase'.
+</violation>
+<violation beginline="49" endline="49" begincolumn="29" endcolumn="35" rule="UnusedLocalVariable" ruleset="Unused Code" package="client" class="Main" method="main" variable="threads" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'threads'.
+</violation>
+</file>
+<file name="C:\Users\Yinglao Liu\Desktop\CS6650\CS6650\client\src\main\java\client\UnitTask.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="49" rule="UnusedImports" ruleset="Import Statements" package="client" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.lang.System.currentTimeMillis'
+</violation>
+<violation beginline="5" endline="5" begincolumn="1" endcolumn="28" rule="UnusedImports" ruleset="Import Statements" package="client" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.text.DateFormat'
+</violation>
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="34" rule="UnusedImports" ruleset="Import Statements" package="client" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.text.SimpleDateFormat'
+</violation>
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="26" rule="UnusedImports" ruleset="Import Statements" package="client" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#UnusedImports" priority="4">
+Avoid unused imports such as 'java.util.Calendar'
+</violation>
+<violation beginline="20" endline="20" begincolumn="18" endcolumn="19" rule="ShortVariable" ruleset="Naming" package="client" class="UnitTask" variable="ip" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like ip
+</violation>
+<violation beginline="24" endline="24" begincolumn="26" endcolumn="27" rule="ShortVariable" ruleset="Naming" package="client" class="UnitTask" method="UnitTask" variable="ip" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like ip
+</violation>
+<violation beginline="32" endline="32" begincolumn="18" endcolumn="41" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="client" class="UnitTask" method="call" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'System.currentTimeMillis' due to existing static import 'java.lang.System.currentTimeMillis'
+</violation>
+<violation beginline="33" endline="33" begincolumn="12" endcolumn="12" rule="ShortVariable" ruleset="Naming" package="client" class="UnitTask" method="call" variable="c" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like c
+</violation>
+<violation beginline="38" endline="38" begincolumn="14" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code" package="client" class="UnitTask" method="call" variable="responseMsg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'responseMsg'.
+</violation>
+<violation beginline="40" endline="40" begincolumn="16" endcolumn="23" rule="UnusedLocalVariable" ruleset="Unused Code" package="client" class="UnitTask" method="call" variable="response" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'response'.
+</violation>
+<violation beginline="44" endline="44" begincolumn="25" endcolumn="48" rule="UnnecessaryFullyQualifiedName" ruleset="Import Statements" package="client" class="UnitTask" method="call" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/imports.html#UnnecessaryFullyQualifiedName" priority="4">
+Unnecessary use of fully qualified name 'System.currentTimeMillis' due to existing static import 'java.lang.System.currentTimeMillis'
+</violation>
+</file>
+</pmd>
