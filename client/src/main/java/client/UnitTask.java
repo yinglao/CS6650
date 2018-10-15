@@ -1,14 +1,6 @@
 package client;
 
-import static java.lang.System.currentTimeMillis;
-
-import com.sun.corba.se.impl.orbutil.concurrent.Sync;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.concurrent.Callable;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.TimeoutException;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
@@ -23,7 +15,7 @@ public class UnitTask implements Callable {
 
   private String ip;
   private int numOfIteration;
-  private  SynchronizedDescriptiveStatistics latencies;
+  private SynchronizedDescriptiveStatistics latencies;
 
 
   public UnitTask(String ip, int numOfIteration, SynchronizedDescriptiveStatistics latencies) {
@@ -42,20 +34,14 @@ public class UnitTask implements Callable {
 
     for (int i = 0; i < numOfIteration; i++) {
       String responseMsg = target.path("myresource").request().get(String.class);
-//      System.out.println(responseMsg);
       long beforeResponse = System.currentTimeMillis();
 
       Response response = builder.post(Entity.entity("post", MediaType.TEXT_PLAIN));
-      int latency = (int)(System.currentTimeMillis() - beforeResponse);
+      int latency = (int) (System.currentTimeMillis() - beforeResponse);
       this.latencies.addValue(latency); // int -> double
 
-
-
-
-//      System.out.println(response.readEntity(String.class));
-
     }
-    int time = (int)(System.currentTimeMillis() - start);
+    int time = (int) (System.currentTimeMillis() - start);
     return time;
   }
 
