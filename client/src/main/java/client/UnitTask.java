@@ -1,6 +1,7 @@
 package client;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CopyOnWriteArrayList;
 import javax.ws.rs.client.Client;
@@ -18,22 +19,25 @@ public class UnitTask implements Runnable {
   private String ip;
   private int numOfIteration;
   private ArrayList<Integer> latencies;
-  private CopyOnWriteArrayList<ArrayList<Integer>> latenciesCollection;
+  private List<ArrayList<Integer>> latenciesCollection;
+  private Client client;
+//  private CopyOnWriteArrayList<ArrayList<Integer>> latenciesCollection;
 
 
-  public UnitTask(String ip, int numOfIteration, ArrayList<Integer> latencies, CopyOnWriteArrayList<ArrayList<Integer>> latenciesCollection) {
+  public UnitTask(String ip, int numOfIteration, ArrayList<Integer> latencies, List<ArrayList<Integer>> latenciesCollection, Client client) {
     this.ip = ip;
     this.numOfIteration = numOfIteration;
     this.latencies = latencies;
 //    System.out.println("Build thread success!");
     this.latenciesCollection = latenciesCollection;
+    this.client = client;
   }
 
   @Override
   public void run() {
     long start = System.currentTimeMillis();
-    Client c = ClientBuilder.newClient();
-    WebTarget target = c.target(this.ip);
+//    ClientTest c = ClientBuilder.newClient();
+    WebTarget target = this.client.target(this.ip);
     Invocation.Builder builder = target.path("myresource").request(MediaType.TEXT_PLAIN);
 
     for (int i = 0; i < numOfIteration; i++) {

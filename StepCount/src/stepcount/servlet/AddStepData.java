@@ -10,7 +10,7 @@ import javax.servlet.http.*;
 import stepcount.dal.*;
 import stepcount.model.*;
 
-@WebServlet("/post")
+@WebServlet("/")
 public class AddStepData extends HttpServlet{
 
 
@@ -19,6 +19,18 @@ public class AddStepData extends HttpServlet{
     @Override
     public void init() throws ServletException {
     	stepDataDao = StepDataDao.getInstance();
+    }
+    
+    @Override
+    public void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        // Map for storing messages.
+        Map<String, String> messages = new HashMap<String, String>();
+        req.setAttribute("messages", messages);
+        
+        
+        //Just render the JSP.
+        req.getRequestDispatcher("/AddStep.jsp").forward(req, resp);
     }
 
 
@@ -45,6 +57,6 @@ public class AddStepData extends HttpServlet{
         }
         
         
-        req.getRequestDispatcher("/AddFood.jsp").forward(req, resp);
+        req.getRequestDispatcher("/AddStep.jsp").forward(req, resp);
     }
 }
