@@ -16,5 +16,6 @@
 	<classpathentry kind="lib" path="C:/Users/Yinglao Liu/Desktop/CS6650/CS6650/StepCount/WebContent/WEB-INF/lib/mysql-connector-java-8.0.11.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Yinglao Liu/Desktop/CS6650/CS6650/StepCount/WebContent/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Yinglao Liu/Desktop/CS6650/CS6650/StepCount/WebContent/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Yinglao Liu/Desktop/CS6650/CS6650/StepCount/WebContent/WEB-INF/lib/javax.ws.rs.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

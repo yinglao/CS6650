@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27e76c7b-acb8-460a-926f-ec9510fb90f9" name="Default" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
+    <list default="true" id="75b7dff2-ea26-4a7b-ada8-72a8b1cb2fbf" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/../client/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,77 +12,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="Process.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/Process.java">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../client/src/main/java/client/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="173">
+              <caret line="18" column="117" lean-forward="true" selection-start-line="18" selection-start-column="117" selection-end-line="18" selection-end-column="117" />
               <folding>
-                <element signature="e#297#298#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#190#191#0" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#366#367#0" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/edu/neu/ccs/bsds/lamport/ProcessTest.java">
+      <file leaf-file-name="SkierClient.class" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/SkierClient.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+            <state relative-caret-position="263">
+              <caret line="115" column="71" lean-forward="true" selection-start-line="115" selection-start-column="71" selection-end-line="115" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/ProcessInterface.java">
+      <file leaf-file-name="ClientTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../client/src/main/java/client/ClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LamportClock.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/LamportClock.java">
+      <file leaf-file-name="UnitTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../client/src/main/java/client/UnitTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="33" selection-start-column="33" selection-end-column="33" />
-              <folding>
-                <element signature="e#184#185#0" expanded="true" />
-                <element signature="e#206#207#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="154">
+              <caret line="40" column="89" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="40" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../client/src/main/java/server/MyResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Interface" />
-        <option value="JUnit4 Test Class" />
-      </list>
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/ProcessInterface.java" />
-        <option value="$PROJECT_DIR$/src/test/java/edu/neu/ccs/bsds/lamport/ProcessTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/LamportClock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/Process.java" />
+        <option value="$PROJECT_DIR$/../client/src/main/java/client/App.java" />
       </list>
     </option>
   </component>
@@ -92,13 +77,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
@@ -113,80 +91,49 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="lamport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
+              <item name="stepcountclient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lamport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
+              <item name="stepcountclient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lamport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lamport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
+              <item name="stepcountclient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lamport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
+              <item name="stepcountclient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bsds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lamport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
+              <item name="stepcountclient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bsds" type="462c0819:PsiDirectoryNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lamport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
+              <item name="stepcountclient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lamport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lamport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bsds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lamport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bsds" type="462c0819:PsiDirectoryNode" />
-              <item name="lamport" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -197,21 +144,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JAX-RS-PathParam-Example/RESTfulExample" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="edu.neu.ccs.bsds.lamport" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -226,31 +164,19 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Application" factoryName="Application">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.App" />
+      <module name="client" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="ProcessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lamport" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.neu.ccs.bsds.lamport.*" />
+          <option name="PATTERN" value="client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="edu.neu.ccs.bsds.lamport" />
-      <option name="MAIN_CLASS_NAME" value="edu.neu.ccs.bsds.lamport.ProcessTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -292,7 +218,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProcessTest" />
+        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -301,31 +227,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="27e76c7b-acb8-460a-926f-ec9510fb90f9" name="Default" comment="" />
-      <created>1540755860749</created>
+      <changelist id="75b7dff2-ea26-4a7b-ada8-72a8b1cb2fbf" name="Default" comment="" />
+      <created>1540799031218</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1540755860749</updated>
-      <workItem from="1540755863514" duration="3027000" />
+      <updated>1540799031218</updated>
+      <workItem from="1540799034471" duration="5302000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="ProcessTest - 2018.10.28 at 13h 13m 57s.xml">
-      <configuration name="ProcessTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProcessTest - 2018.10.28 at 13h 14m 58s.xml">
-      <configuration name="ProcessTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProcessTest - 2018.10.28 at 13h 17m 41s.xml">
-      <configuration name="ProcessTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProcessTest - 2018.10.28 at 13h 18m 47s.xml">
-      <configuration name="ProcessTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3027000" />
+    <option name="totallyTimeSpent" value="5302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
@@ -333,9 +245,10 @@
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="simpleUML" />
-      <window_info anchor="bottom" id="Messages" weight="0.3539519" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
+      <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
@@ -345,7 +258,7 @@
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25058547" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25058547" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -368,59 +281,43 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/Event.java">
+    <entry file="file://$PROJECT_DIR$/../client/src/main/java/client/UnitTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="154">
+          <caret line="40" column="89" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="40" selection-end-column="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/Lamport.java">
+    <entry file="file://$PROJECT_DIR$/../client/src/main/java/server/MyResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="95">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/ProcessInterface.java">
+    <entry file="file://$PROJECT_DIR$/../client/src/main/java/client/ClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/Process.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="41" />
           <folding>
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/neu/ccs/bsds/lamport/ProcessTest.java">
+    <entry file="file://$USER_HOME$/Downloads/SkierClient.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+        <state relative-caret-position="263">
+          <caret line="115" column="71" lean-forward="true" selection-start-line="115" selection-start-column="71" selection-end-line="115" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/neu/ccs/bsds/lamport/LamportClock.java">
+    <entry file="file://$PROJECT_DIR$/../client/src/main/java/client/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
+        <state relative-caret-position="173">
+          <caret line="18" column="117" lean-forward="true" selection-start-line="18" selection-start-column="117" selection-end-line="18" selection-end-column="117" />
           <folding>
-            <element signature="e#184#185#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
