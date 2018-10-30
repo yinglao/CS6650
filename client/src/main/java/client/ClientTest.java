@@ -18,7 +18,8 @@ import org.apache.commons.math3.stat.descriptive.SynchronizedDescriptiveStatisti
  */
 public class ClientTest {
 
-  public static void runPhase(Client client, int numberOfThreads, int numberOfIterations, String BASE_URI) {
+  public static void runPhase(Client client, int numberOfThreads, int numberOfIterations, String BASE_URI,
+      int startTime, int endTime) {
 
     ExecutorService phase = Executors.newFixedThreadPool(numberOfThreads);
 //    List<Runnable> threads = new ArrayList<>();
@@ -29,7 +30,7 @@ public class ClientTest {
     long initialTime = System.currentTimeMillis();
     for (int i = 0; i < numberOfThreads; i++) {
       ArrayList<Integer> latencies = new ArrayList<>();
-      phase.submit(new UnitTask(BASE_URI, numberOfIterations, latencies, latenciesCollection, client));
+      phase.submit(new UnitTask(BASE_URI, numberOfIterations, latencies, latenciesCollection, client, startTime, endTime));
     }
 
 
@@ -79,15 +80,19 @@ public class ClientTest {
   }
 
   public static void main(String[] args) throws IOException {
-    int maxNumberOfThreads = 100;
-    int numberOfIterations = 100;
-    String BASE_URI = "http://ec2-18-236-89-52.us-west-2.compute.amazonaws.com:8080/webapp/webapi";
+    int maxNumberOfThreads = 64;
+    int numberOfTestPerPhase = 100;
+    String BASE_URI = "http://localhost:8080/webapi";
     Double[] factors = {0.1, 0.5, 1.0, 0.25};
+    int[] phaseLength = {3, 5, 11, 5};
+    int[] startTimes = {0, 3, 8, 19};
+    int[] endTimes = {2, 7, 18, 23};
     String[] phaseNames = {"Warm-up", "Loading", "Peak", "Cooldown"};
     Client c = ClientBuilder.newClient();
     for (int i = 0; i < 4; i++) {
       System.out.println(phaseNames[i] + " phase Start >>>>>>>>>>>>>>>>>");
-      runPhase(c, (int) (maxNumberOfThreads * factors[i]), numberOfIterations, BASE_URI);
+      runPhase(c, (int) (maxNumberOfThreads * factors[i]), numberOfTestPerPhase * phaseLength[i],
+          BASE_URI, startTimes[i], endTimes[i]);
     }
 
   }
