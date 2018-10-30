@@ -46,7 +46,7 @@ public class ClientTest {
       System.out.println("number of latency catch: "+ allLatencies.size());
       System.out.println("Phase use time:" + totalTime + " ms");
       System.out.println(
-          "Total Number of requests sent: " + numberOfIterations * numberOfThreads);
+          "Total Number of requests sent: " + numberOfIterations * numberOfThreads * 5);
       System.out.println("Total Number of successful requests: " + latencies.getN());
       System.out.println("Mean latency: " + latencies.getMean() + " ms");
       System.out.println("Median latency: " + latencies.getPercentile(50) + " ms");
