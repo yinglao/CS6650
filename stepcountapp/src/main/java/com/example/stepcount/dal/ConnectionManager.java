@@ -36,9 +36,9 @@ public class ConnectionManager {
 	// User to connect to your database instance. By default, this is "root2".
 	private final String user = "root";
 	// Password for the user.
-	private final String password = "password";
+	private final String password = "loveyouforever20";
 	// URI to your database server. If running on the same machine, then this is "localhost".
-	private final String hostName = "bsds.ctsbqgasqtvo.us-west-2.rds.amazonaws.com";
+	private final String hostName = "localhost";
 	// Port to your database server. By default, this is 3307.
 	private final int port= 3306;
 	// Name of the MySQL schema that contains your tables.

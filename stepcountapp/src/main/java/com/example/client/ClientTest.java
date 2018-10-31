@@ -64,8 +64,9 @@ public class ClientTest {
 
   public static void main(String[] args) throws IOException {
     int maxNumberOfThreads = 10;
-    int numberOfTestPerPhase = 2;
-    String BASE_URI = "http://stepcountapp-env.aadp53rwfi.us-west-2.elasticbeanstalk.com/webapi";
+    int numberOfTestPerPhase = 50;
+//    String BASE_URI = "http://stepcountapp-env.aadp53rwfi.us-west-2.elasticbeanstalk.com/webapi";
+    String BASE_URI = "http://localhost:8080/webapi";
     Double[] factors = {0.1, 0.5, 1.0, 0.25};
     int[] phaseLength = {3, 5, 11, 5};
     int[] startTimes = {0, 3, 8, 19};

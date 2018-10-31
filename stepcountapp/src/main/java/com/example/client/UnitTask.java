@@ -69,7 +69,7 @@ public class UnitTask implements Runnable {
       response = target.request().post(Entity.entity(stepData1, MediaType.APPLICATION_JSON));
       latency = (int) (System.currentTimeMillis() - beforeResponse);
       this.latencies.add(latency); // int -> double
-      System.out.println(i);
+//      System.out.println(i);
       response.close();
 
 
