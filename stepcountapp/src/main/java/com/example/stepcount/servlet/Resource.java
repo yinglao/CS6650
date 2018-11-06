@@ -3,6 +3,7 @@ package com.example.stepcount.servlet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -65,15 +66,19 @@ public class Resource {
 //    StepData newStepData = new StepData(userId, day, timeInterval, stepCount);
 //    stepDataDao.create(newStepData);
 
-    @Path("")
-    @POST
-    @Consumes("application/json")
-    public boolean postData(StepData stepData) throws SQLException {
-      stepDataDao.create(stepData);
-      return true;
+  @Path("")
+  @POST
+  @Consumes("application/json")
+  public boolean postData(StepData stepData) throws SQLException {
+    stepDataDao.create(stepData);
+    return true;
   }
 
-
-
+  @Path("clear")
+  @GET
+  public boolean clearData() throws SQLException {
+    stepDataDao.clear();
+    return true;
+  }
 
 }

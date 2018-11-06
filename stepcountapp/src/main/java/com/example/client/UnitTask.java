@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
-import javax.ws.rs.client.Invocation;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -21,12 +20,15 @@ public class UnitTask implements Runnable {
   private Client client;
   private int startTime;
   private int endTime;
+  private ArrayList<Long> responseTimes;
+  private List<ArrayList<Long>> responseTimesCollection;
 //  private CopyOnWriteArrayList<ArrayList<Integer>> latenciesCollection;
 
 
   public UnitTask(String ip, int numberOfIteration, ArrayList<Integer> latencies,
       List<ArrayList<Integer>> latenciesCollection, Client client,
-      int startTime, int endTime) {
+      int startTime, int endTime, ArrayList<Long> responseTimes,
+      List<ArrayList<Long>> reponseTimesCollection) {
     this.ip = ip;
     this.numberOfIteration = numberOfIteration;
     this.latencies = latencies;
@@ -35,6 +37,8 @@ public class UnitTask implements Runnable {
     this.client = client;
     this.startTime = startTime;
     this.endTime = endTime;
+    this.responseTimes = responseTimes;
+    this.responseTimesCollection =  reponseTimesCollection;
   }
 
   @Override
@@ -63,19 +67,21 @@ public class UnitTask implements Runnable {
       int latency;
       Response response;
       String responseMsg;
-
+//      System.out.println(i);
 
       beforeResponse = System.currentTimeMillis();
       response = target.request().post(Entity.entity(stepData1, MediaType.APPLICATION_JSON));
       latency = (int) (System.currentTimeMillis() - beforeResponse);
+      this.responseTimes.add(System.currentTimeMillis());
       this.latencies.add(latency); // int -> double
-//      System.out.println(i);
+
       response.close();
 
 
       beforeResponse = System.currentTimeMillis();
       response = target.request().post(Entity.entity(stepData2, MediaType.APPLICATION_JSON));
       latency = (int) (System.currentTimeMillis() - beforeResponse);
+      this.responseTimes.add(System.currentTimeMillis());
       this.latencies.add(latency); // int -> double
       response.close();
 
@@ -84,22 +90,26 @@ public class UnitTask implements Runnable {
       beforeResponse = System.currentTimeMillis();
       responseMsg = target.path("current/" + userId1).request().get(String.class);
       latency = (int) (System.currentTimeMillis() - beforeResponse);
+      this.responseTimes.add(System.currentTimeMillis());
       this.latencies.add(latency); // int -> double
 
       beforeResponse = System.currentTimeMillis();
       responseMsg = target.path("current/" + userId1).request().get(String.class);
       latency = (int) (System.currentTimeMillis() - beforeResponse);
+      this.responseTimes.add(System.currentTimeMillis());
       this.latencies.add(latency); // int -> double
 
 
       beforeResponse = System.currentTimeMillis();
       response = target.request().post(Entity.entity(stepData3, MediaType.APPLICATION_JSON));
       latency = (int) (System.currentTimeMillis() - beforeResponse);
+      this.responseTimes.add(System.currentTimeMillis());
       this.latencies.add(latency); // int -> double
       response.close();
 
     }
     this.latenciesCollection.add(latencies);
+    this.responseTimesCollection.add(responseTimes);
 //    int time = (int) (System.currentTimeMillis() - start);
 //    return time;
   }
