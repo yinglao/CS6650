@@ -34,7 +34,8 @@ public class Resource {
     @Produces(MediaType.TEXT_PLAIN)
     @Consumes(MediaType.TEXT_PLAIN)
     public int getDatabyUserID(@PathParam("userId") int userId) throws SQLException {
-        return stepDataDao.getStepDataByUserID(userId);
+        return 1;
+    	//return stepDataDao.getStepDataByUserID(userId);
     }
     
     
