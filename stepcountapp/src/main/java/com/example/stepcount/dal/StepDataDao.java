@@ -7,16 +7,19 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import com.example.stepcount.model.*;
+import org.apache.commons.dbcp2.BasicDataSource;
 
 
 public class StepDataDao {
 
-  protected ConnectionManager connectionManager;
+  protected ConnectionManager ConnectionManager;
 
   private static StepDataDao instance = null;
 
   protected StepDataDao() {
-    connectionManager = new ConnectionManager();
+//    ConnectionManager = new ConnectionManager();
+//    BasicDataSource dataSource = DataBaseUtility.getDataSource();
+
   }
 
   public static StepDataDao getInstance() {
@@ -25,35 +28,61 @@ public class StepDataDao {
     }
     return instance;
   }
+  public void clear() throws SQLException {
+    String clearStepData =
+        "TRUNCATE TABLE StepData;";
+    Connection connection = null;
+    PreparedStatement clearStmt = null;
+    try {
+      connection = ConnectionManager.getConnection();
+      // Food has an auto-generated key. So we want to retrieve that key.
+      clearStmt = connection.prepareStatement(clearStepData,
+          Statement.RETURN_GENERATED_KEYS);
+      clearStmt.executeUpdate();
 
+      // Retrieve the auto-generated key and set it, so it can be used by the caller.
+      // For more details, see:
+      // http://dev.mysql.com/doc/connector-j/en/connector-j-usagenotes-last-insert-id.html
+    } catch (SQLException e) {
+      e.printStackTrace();
+      throw e;
+    } finally {
+      if (connection != null) {
+//        System.out.println("close!");
+        connection.close();
+      }
+      if (clearStmt != null) {
+        clearStmt.close();
+      }
+
+    }
+  }
   public StepData create(StepData stepData) throws SQLException {
     String insertStepData =
         "INSERT INTO StepData(UserId, RecordDate, TimeInterval, StepCount) " +
-            "VALUES(?,?,?,?);";
+            "VALUES(?,?,?,?)"
+            + "ON duplicate KEY UPDATE "
+            + "StepCount = VALUES(StepCount);";
     Connection connection = null;
     PreparedStatement insertStmt = null;
     try {
-      connection = connectionManager.getConnection();
-      // Food has an auto-generated key. So we want to retrieve that key.
+      connection = ConnectionManager.getConnection();
+
       insertStmt = connection.prepareStatement(insertStepData,
           Statement.RETURN_GENERATED_KEYS);
       insertStmt.setInt(1, stepData.getUserId());
-      // Note: for the sake of simplicity, just set Picture to null for now.
       insertStmt.setInt(2, stepData.getRecordDate());
       insertStmt.setInt(3, stepData.getTimeInterval());
       insertStmt.setInt(4, stepData.getStepCount());
       insertStmt.executeUpdate();
 
-      // Retrieve the auto-generated key and set it, so it can be used by the caller.
-      // For more details, see:
-      // http://dev.mysql.com/doc/connector-j/en/connector-j-usagenotes-last-insert-id.html
       return stepData;
     } catch (SQLException e) {
       e.printStackTrace();
       throw e;
     } finally {
       if (connection != null) {
-        System.out.println("close!");
+
         connection.close();
       }
       if (insertStmt != null) {
@@ -63,20 +92,28 @@ public class StepDataDao {
     }
   }
 
+
   public int getStepDataByUserID(int userId) throws SQLException {
     int stepCount = 0;
-    String selectStepData =
-        "select UserID, RecordDate, sum(StepCount) as Step " +
-            "from StepData " +
-            "where UserID = ? " +
-            "group by UserID, RecordDate " +
-            "order by RecordDate DESC " +
-            "limit 1;";
+
+    String selectStepData = "select sum(StepCount) as Step "
+        + "from ("
+        + "select StepCount "
+        + "from StepData "
+        + "where UserID=?) as UserStep;";
+
+//    String selectStepData =
+//        "select UserID, RecordDate, sum(StepCount) as Step " +
+//            "from StepData " +
+//            "where UserID = ? " +
+//            "group by UserID, RecordDate " +
+//            "order by RecordDate DESC " +
+//            "limit 1;";
     Connection connection = null;
     PreparedStatement selectStmt = null;
     ResultSet results = null;
     try {
-      connection = connectionManager.getConnection();
+      connection = ConnectionManager.getConnection();
       selectStmt = connection.prepareStatement(selectStepData);
       selectStmt.setInt(1, userId);
       results = selectStmt.executeQuery();
@@ -89,7 +126,7 @@ public class StepDataDao {
       throw e;
     } finally {
       if (connection != null) {
-        System.out.println("close!");
+//        System.out.println("close!");
         connection.close();
       }
       if (selectStmt != null) {
@@ -117,7 +154,7 @@ public class StepDataDao {
     PreparedStatement selectStmt = null;
     ResultSet results = null;
     try {
-      connection = connectionManager.getConnection();
+      connection = ConnectionManager.getConnection();
       selectStmt = connection.prepareStatement(selectStepData);
       selectStmt.setInt(1, userId);
       selectStmt.setInt(2, RecordDate);
@@ -131,7 +168,7 @@ public class StepDataDao {
       throw e;
     } finally {
       if (connection != null) {
-        System.out.println("close!");
+//        System.out.println("close!");
         connection.close();
       }
       if (selectStmt != null) {
@@ -160,12 +197,11 @@ public class StepDataDao {
             "group by userID, RecordDate) as dayData " +
             "where UserID = ? and RecordDate >= ? and RecordDate < ? " +
             "order by RecordDate;";
-
     Connection connection = null;
     PreparedStatement selectStmt = null;
     ResultSet results = null;
     try {
-      connection = connectionManager.getConnection();
+      connection = ConnectionManager.getConnection();
       selectStmt = connection.prepareStatement(selectStepData);
       selectStmt.setInt(1, userId);
       selectStmt.setInt(2, startDay);
@@ -182,7 +218,6 @@ public class StepDataDao {
       throw e;
     } finally {
       if (connection != null) {
-        System.out.println("close!");
         connection.close();
       }
       if (selectStmt != null) {
