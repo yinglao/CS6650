@@ -60,7 +60,9 @@ public class StepDataDao {
   public StepData create(StepData stepData) throws SQLException {
     String insertStepData =
         "INSERT INTO StepData(UserId, RecordDate, TimeInterval, StepCount) " +
-            "VALUES(?,?,?,?);";
+            "VALUES(?,?,?,?)"
+            + "ON duplicate KEY UPDATE "
+            + "StepCount = VALUES(StepCount);";
     Connection connection = null;
     PreparedStatement insertStmt = null;
     try {
@@ -90,15 +92,23 @@ public class StepDataDao {
     }
   }
 
+
   public int getStepDataByUserID(int userId) throws SQLException {
     int stepCount = 0;
-    String selectStepData =
-        "select UserID, RecordDate, sum(StepCount) as Step " +
-            "from StepData " +
-            "where UserID = ? " +
-            "group by UserID, RecordDate " +
-            "order by RecordDate DESC " +
-            "limit 1;";
+
+    String selectStepData = "select sum(StepCount) as Step "
+        + "from ("
+        + "select StepCount "
+        + "from StepData "
+        + "where UserID=?) as UserStep;";
+
+//    String selectStepData =
+//        "select UserID, RecordDate, sum(StepCount) as Step " +
+//            "from StepData " +
+//            "where UserID = ? " +
+//            "group by UserID, RecordDate " +
+//            "order by RecordDate DESC " +
+//            "limit 1;";
     Connection connection = null;
     PreparedStatement selectStmt = null;
     ResultSet results = null;

@@ -33,7 +33,7 @@ public class ConnectionManager {
   // Password for the user.
   private final static String password = "password";
   // URI to your database server. If running on the same machine, then this is "localhost".
-  private final static String hostName = "west-aws-mysql-upgrade.ctsbqgasqtvo.us-west-2.rds.amazonaws.com";
+  private final static String hostName = "west-rds.ctsbqgasqtvo.us-west-2.rds.amazonaws.com";
 //  private final static String hostName = "localhost";
   // Port to your database server. By default, this is 3307.
   private final static int port = 3306;
