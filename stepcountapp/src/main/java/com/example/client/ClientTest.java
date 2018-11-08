@@ -80,11 +80,12 @@ public class ClientTest {
   }
 
   public static void main(String[] args) throws IOException {
-    int maxNumberOfThreads = 64;
+    int maxNumberOfThreads = 128;
     int numberOfTestPerPhase = 100;
 //    String BASE_URI = "http://stepcountapp-env.aadp53rwfi.us-west-2.elasticbeanstalk.com/webapi";
-//    String BASE_URI =  "http://ec2-18-236-69-79.us-west-2.compute.amazonaws.com:8080/step-count-app/webapi";
-    String BASE_URI = "http://ec2-34-221-182-90.us-west-2.compute.amazonaws.com:8080/step-count-app/webapi";
+
+    String BASE_URI =  "http://ec2-54-187-48-188.us-west-2.compute.amazonaws.com:8080/step-count-app/webapi";
+//    String BASE_URI = "http://ec2-34-221-182-90.us-west-2.compute.amazonaws.com:8080/step-count-app/webapi";
 //    String BASE_URI = "http://localhost:8080/webapi";
     Double[] factors = {0.1, 0.5, 1.0, 0.25};
     int[] phaseLength = {3, 5, 11, 5};
