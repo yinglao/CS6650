@@ -84,7 +84,8 @@ public class ClientTest {
     int numberOfTestPerPhase = 100;
 //    String BASE_URI = "http://stepcountapp-env.aadp53rwfi.us-west-2.elasticbeanstalk.com/webapi";
 
-    String BASE_URI =  "http://ec2-54-187-48-188.us-west-2.compute.amazonaws.com:8080/step-count-app/webapi";
+//    String BASE_URI =  "http://ec2-54-190-132-107.us-west-2.compute.amazonaws.com:8080/step-count-app/webapi";
+    String BASE_URI = "http://applb-343214273.us-west-2.elb.amazonaws.com/step-count-app/webapi";
 //    String BASE_URI = "http://ec2-34-221-182-90.us-west-2.compute.amazonaws.com:8080/step-count-app/webapi";
 //    String BASE_URI = "http://localhost:8080/webapi";
     Double[] factors = {0.1, 0.5, 1.0, 0.25};

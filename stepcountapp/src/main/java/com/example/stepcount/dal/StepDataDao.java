@@ -54,7 +54,6 @@ public class StepDataDao {
       if (clearStmt != null) {
         clearStmt.close();
       }
-
     }
   }
   public StepData create(StepData stepData) throws SQLException {
