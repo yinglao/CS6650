@@ -49,6 +49,7 @@ public class UnitTask implements Runnable {
 //    System.out.println(this.ip);
 
     for (int i = 0; i < numberOfIteration; i++) {
+//      System.out.println(i);
 
       int userId1 = ThreadLocalRandom.current().nextInt(0, 100000);
       int timeInterval1 = ThreadLocalRandom.current().nextInt(startTime, endTime + 1);

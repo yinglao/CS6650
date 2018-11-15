@@ -80,7 +80,7 @@ public class ClientTest {
   }
 
   public static void main(String[] args) throws IOException {
-    int maxNumberOfThreads = 128;
+    int maxNumberOfThreads = 32;
     int numberOfTestPerPhase = 100;
 //    String BASE_URI = "http://stepcountapp-env.aadp53rwfi.us-west-2.elasticbeanstalk.com/webapi";
 
