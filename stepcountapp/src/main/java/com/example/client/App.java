@@ -19,7 +19,7 @@ public class App {
 
     Response response;
     String responseMsg;
-    String BASE_URI = "http://localhost:8080/webapi";
+    String BASE_URI = "http://35.230.118.54:8080/step-count-app/webapi";
 
     Client c = ClientBuilder.newClient();
 //    WebTarget target = c.target(BASE_URI);
@@ -40,8 +40,10 @@ public class App {
     WebTarget target = c.target(BASE_URI);
     System.out.println(BASE_URI);
     beforeResponse = System.currentTimeMillis();
+    responseMsg = target.path("current/" + userId1).request().get(String.class);
     response = target.request().post(Entity.entity(stepData, MediaType.APPLICATION_JSON));
     latency = (int) (System.currentTimeMillis() - beforeResponse);
+    System.out.println(response);
     response.close();
 
 

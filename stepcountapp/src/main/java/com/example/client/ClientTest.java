@@ -80,14 +80,16 @@ public class ClientTest {
   }
 
   public static void main(String[] args) throws IOException {
-    int maxNumberOfThreads = 32;
+    int maxNumberOfThreads = 64;
     int numberOfTestPerPhase = 100;
 //    String BASE_URI = "http://stepcountapp-env.aadp53rwfi.us-west-2.elasticbeanstalk.com/webapi";
 
-//    String BASE_URI =  "http://ec2-54-190-132-107.us-west-2.compute.amazonaws.com:8080/step-count-app/webapi";
-    String BASE_URI = "http://applb-343214273.us-west-2.elb.amazonaws.com/step-count-app/webapi";
+//    String BASE_URI =  "http://35.230.118.54:8080/step-count-app/webapi"; //GCP single VM
+//    String BASE_URI = "http://applb-343214273.us-west-2.elb.amazonaws.com/step-count-app/webapi";
 //    String BASE_URI = "http://ec2-34-221-182-90.us-west-2.compute.amazonaws.com:8080/step-count-app/webapi";
 //    String BASE_URI = "http://localhost:8080/webapi";
+    String BASE_URI = "http://35.244.218.16/step-count-app/webapi"; // GCP load balancer
+
     Double[] factors = {0.1, 0.5, 1.0, 0.25};
     int[] phaseLength = {3, 5, 11, 5};
     int[] startTimes = {0, 3, 8, 19};
